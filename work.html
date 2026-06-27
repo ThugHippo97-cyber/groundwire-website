@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>html,body{background:#0F1B2D}body{opacity:0;transform:translateY(6px)}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Work | GroundWire Web Solutions</title>
+    <meta
+      name="description"
+      content="See real and example websites built by GroundWire Web Solutions for local service businesses, including a live client project."
+    />
+    <link rel="icon" href="/logo/groundwire-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-background font-sans text-body antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:font-semibold"
+    >
+      Skip to main content
+    </a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="index.html" class="flex items-center" aria-label="GroundWire Web Solutions home">
+          <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto sm:h-9" />
+        </a>
+
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">About</a>
+        </nav>
+
+        <div class="hidden lg:block">
+          <a href="contact.html" class="btn-primary !px-5 !py-2.5 !text-xs">Get A Free Quote</a>
+        </div>
+
+        <button
+          id="nav-toggle"
+          type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-ink lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="icon-burger" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav
+        id="mobile-nav"
+        class="hidden border-t border-white/10 bg-navy px-6 py-4 lg:hidden"
+        aria-label="Mobile"
+      >
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">About</a>
+          <a href="contact.html" class="btn-primary mt-2 w-full">Get A Free Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative overflow-hidden bg-navy pt-28 pb-14 sm:pt-32 sm:pb-16">
+        <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <p class="section-eyebrow text-accent">Portfolio</p>
+            <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">Our Work</h1>
+            <p class="mt-6 text-lg text-ink-muted">A look at the kind of websites we build &mdash; including one currently live for a real client.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROJECT GRID ===================== -->
+      <section class="relative border-t border-line py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mt-2 grid gap-6 sm:grid-cols-2">
+            <!-- Project: Rodeo Shine Window Cleaning (real client, real screenshot) -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover">
+              <div class="relative aspect-[16/10] w-full overflow-hidden">
+                <img
+                  src="/screenshots/rodeo-shine-hero.jpg"
+                  alt="Rodeo Shine Window Cleaning homepage"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-base font-semibold">Rodeo Shine Window Cleaning</h3>
+                  <a
+                    href="https://rodeoshinewindows.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whitespace-nowrap text-xs font-semibold text-primary hover:underline"
+                  >
+                    Live Site &#8599;
+                  </a>
+                </div>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Window Cleaning Service &middot; Burleson, TX</p>
+                <p class="mt-3 text-sm text-muted"><span class="font-medium text-heading">Goal:</span> Generate free estimate requests from local homeowners.</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                  <li>Online free-estimate form</li>
+                  <li>Mobile optimization</li>
+                  <li>Before/after photo gallery</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project: NorthStar Landscaping -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 100ms">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#0b1d12] text-white"><span class="absolute right-2 top-2 z-10 rounded-md bg-navy/85 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">Sample Concept</span>
+                <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                  <span class="text-[10px] font-bold tracking-[0.2em]">NORTHSTAR</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#3ddc84]"></span>
+                </div>
+                <div class="space-y-3 p-4">
+                  <p class="text-sm font-bold leading-tight">Beautiful Yards,<br />Built To Last.</p>
+                  <div class="h-14 rounded bg-gradient-to-br from-[#1f5f3a] to-[#0b1d12]"></div>
+                  <span class="inline-block rounded bg-[#3ddc84] px-3 py-1.5 text-[10px] font-semibold text-[#0b1d12]">Get A Quote</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-base font-semibold">NorthStar Landscaping</h3>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Landscaping Company &middot; Sample Concept</p>
+                <p class="mt-3 text-sm text-muted"><span class="font-medium text-heading">Goal:</span> Generate quote requests.</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                  <li>Contact forms</li>
+                  <li>Mobile optimization</li>
+                  <li>SEO setup</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project: Bloom & Birch Boutique -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 200ms">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#231019] text-white"><span class="absolute right-2 top-2 z-10 rounded-md bg-navy/85 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">Sample Concept</span>
+                <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                  <span class="text-[10px] font-bold tracking-[0.2em]">BLOOM &amp; BIRCH</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#e8a0bf]"></span>
+                </div>
+                <div class="space-y-3 p-4">
+                  <p class="text-sm font-bold leading-tight">Handmade Goods,<br />Delivered With Care.</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                    <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                    <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                  </div>
+                  <span class="inline-block rounded bg-[#e8a0bf] px-3 py-1.5 text-[10px] font-semibold text-[#231019]">Shop Now</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-base font-semibold">Bloom &amp; Birch Boutique</h3>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Retail Boutique &middot; Sample Concept</p>
+                <p class="mt-3 text-sm text-muted"><span class="font-medium text-heading">Goal:</span> Sell handmade products online.</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                  <li>E-commerce integration</li>
+                  <li>Product pages</li>
+                  <li>Checkout integration</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project: Riverstone Coffee -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 300ms">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#221404] text-white"><span class="absolute right-2 top-2 z-10 rounded-md bg-navy/85 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">Sample Concept</span>
+                <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                  <span class="text-[10px] font-bold tracking-[0.2em]">RIVERSTONE</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#d99248]"></span>
+                </div>
+                <div class="space-y-3 p-4">
+                  <p class="text-sm font-bold leading-tight">Locally Roasted,<br />Always Fresh.</p>
+                  <div class="space-y-1.5">
+                    <div class="h-2 w-3/4 rounded-full bg-white/10"></div>
+                    <div class="h-2 w-2/3 rounded-full bg-white/10"></div>
+                    <div class="h-2 w-1/2 rounded-full bg-white/10"></div>
+                  </div>
+                  <span class="inline-block rounded bg-[#d99248] px-3 py-1.5 text-[10px] font-semibold text-[#221404]">View Menu</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-base font-semibold">Riverstone Coffee</h3>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Caf&eacute; &middot; Sample Concept</p>
+                <p class="mt-3 text-sm text-muted"><span class="font-medium text-heading">Goal:</span> Show menu and location.</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                  <li>Mobile-friendly menu</li>
+                  <li>Google Maps integration</li>
+                  <li>Contact page</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TESTIMONIALS ===================== -->
+      <section class="relative border-t border-line bg-white py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Sample Testimonials</p>
+            <h2 class="section-heading">The Kind Of Results We Aim For</h2>
+            <p class="mt-4 text-sm text-muted">Illustrative examples of the outcomes we build toward &mdash; not real client quotes.</p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <figure class="card-surface reveal">
+              <div class="flex gap-1 text-primary" aria-hidden="true">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </div>
+              <blockquote class="mt-4 text-sm leading-relaxed text-muted">
+                "Before GroundWire, we didn't even have a website. Now customers find us on Google and book us directly online. Worth every penny."
+              </blockquote>
+              <figcaption class="mt-5 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary">JM</div>
+                <div>
+                  <p class="text-sm font-semibold">Jordan M.</p>
+                  <p class="text-xs text-muted">Window Cleaning Owner</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="card-surface reveal" style="transition-delay: 100ms">
+              <div class="flex gap-1 text-primary" aria-hidden="true">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </div>
+              <blockquote class="mt-4 text-sm leading-relaxed text-muted">
+                "Our old site looked like it was from 2009. GroundWire gave us a clean, modern look and we still get to call them directly when we need a change."
+              </blockquote>
+              <figcaption class="mt-5 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary">RT</div>
+                <div>
+                  <p class="text-sm font-semibold">Rachel T.</p>
+                  <p class="text-xs text-muted">Landscaping Company Owner</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="card-surface reveal" style="transition-delay: 200ms">
+              <div class="flex gap-1 text-primary" aria-hidden="true">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              </div>
+              <blockquote class="mt-4 text-sm leading-relaxed text-muted">
+                "They handled everything from start to finish. No headaches, no jargon&mdash;just a fast, professional site that actually brings in calls."
+              </blockquote>
+              <figcaption class="mt-5 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary">DK</div>
+                <div>
+                  <p class="text-sm font-semibold">Dave K.</p>
+                  <p class="text-xs text-muted">HVAC Contractor</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL CTA ===================== -->
+      <section class="relative bg-navy py-20">
+        <div class="relative mx-auto max-w-2xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <h2 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Want A Site Like This For Your Business?</h2>
+            <a href="contact.html" class="btn-primary mt-8 inline-flex">Get A Free Quote</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="relative bg-navy pt-12 pb-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto" />
+            <p class="mt-2 text-xs uppercase tracking-[0.2em] text-ink-muted">Web Solutions</p>
+            <p class="mt-4 text-sm text-ink-muted">
+              We <span class="text-accent">Connect</span> Businesses To Their Customers.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Navigate</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="index.html" class="hover:text-accent">Home</a></li>
+              <li><a href="services.html" class="hover:text-accent">Services</a></li>
+              <li><a href="work.html" class="hover:text-accent">Work</a></li>
+              <li><a href="about.html" class="hover:text-accent">About</a></li>
+              <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Contact</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="mailto:groundwirewebsolutions@gmail.com" class="hover:text-accent">groundwirewebsolutions@gmail.com</a></li>
+              <li>Serving local businesses everywhere</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Follow Us</h3>
+            <div class="mt-4 flex gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61591482593823" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/groundwirewebsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.78.22 2.4.46.65.25 1.2.6 1.74 1.13.53.54.88 1.09 1.13 1.74.24.62.41 1.34.46 2.4.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.78-.46 2.4a4.7 4.7 0 0 1-1.13 1.74 4.7 4.7 0 0 1-1.74 1.13c-.62.24-1.34.41-2.4.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.78-.22-2.4-.46a4.7 4.7 0 0 1-1.74-1.13 4.7 4.7 0 0 1-1.13-1.74c-.24-.62-.41-1.34-.46-2.4C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.78.46-2.4.25-.65.6-1.2 1.13-1.74A4.7 4.7 0 0 1 5.39.61c.62-.24 1.34-.41 2.4-.46C8.85.1 9.19.09 11.91.09Zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.8.4-1.15.74-.34.35-.56.69-.74 1.15-.14.35-.3.88-.34 1.85C3.83 9 3.82 9.32 3.82 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.8.74 1.15.35.34.69.56 1.15.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.8-.4 1.15-.74.34-.35.56-.69.74-1.15.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3 3 0 0 0-.74-1.15 3 3 0 0 0-1.15-.74c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06ZM12 6.87a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-2.83a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@groundwirewebsolutions" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16.6 5.82a4.92 4.92 0 0 1-1.02-2.07h-3.07v12.86a2.93 2.93 0 1 1-2.07-2.8V10.8a5.99 5.99 0 0 0-1-.08A6 6 0 1 0 15.5 16.7V9.7a7.93 7.93 0 0 0 4.5 1.4V8.06a4.92 4.92 0 0 1-3.4-2.24Z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@GroundWireWebSolutions" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77A26.3 26.3 0 0 0 2 12a26.3 26.3 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26.3 26.3 0 0 0 22 12a26.3 26.3 0 0 0-.42-4.81ZM9.96 15.02V8.98L15.5 12l-5.54 3.02Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-ink-muted sm:flex-row">
+          <p>&copy; <span id="year"></span> GroundWire Web Solutions. All rights reserved.</p>
+          <p>We Connect Businesses To Their Customers.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

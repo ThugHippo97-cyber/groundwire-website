@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>html,body{background:#0F1B2D}body{opacity:0;transform:translateY(6px)}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | GroundWire Web Solutions</title>
+    <meta
+      name="description"
+      content="GroundWire Web Solutions helps local businesses grow through simple, results-focused websites. Learn about our mission and values."
+    />
+    <link rel="icon" href="/logo/groundwire-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-background font-sans text-body antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:font-semibold"
+    >
+      Skip to main content
+    </a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="index.html" class="flex items-center" aria-label="GroundWire Web Solutions home">
+          <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto sm:h-9" />
+        </a>
+
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">About</a>
+        </nav>
+
+        <div class="hidden lg:block">
+          <a href="contact.html" class="btn-primary !px-5 !py-2.5 !text-xs">Get A Free Quote</a>
+        </div>
+
+        <button
+          id="nav-toggle"
+          type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-ink lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="icon-burger" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav
+        id="mobile-nav"
+        class="hidden border-t border-white/10 bg-navy px-6 py-4 lg:hidden"
+        aria-label="Mobile"
+      >
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">About</a>
+          <a href="contact.html" class="btn-primary mt-2 w-full">Get A Free Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative overflow-hidden bg-navy pt-28 pb-14 sm:pt-32 sm:pb-16">
+        <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <p class="section-eyebrow text-accent">About Us</p>
+            <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">We're GroundWire Web Solutions</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== MISSION STATEMENT (placeholder) ===================== -->
+      <section class="relative border-t border-line bg-white py-16">
+        <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <p class="section-eyebrow">Our Mission</p>
+            <h2 class="section-heading">Helping Local Businesses Grow Through Better Websites</h2>
+            <p class="mt-4 text-muted">
+              We believe a small business shouldn't need an in-house tech team to compete online. GroundWire exists to
+              make professional, lead-generating websites simple and affordable &mdash; without the jargon, and without the
+              long-term lock-in.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TRUST / CAPABILITY CARDS ===================== -->
+      <section class="relative border-t border-line py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Built To Perform</p>
+            <h2 class="section-heading">Your Website Should Work As Hard As You Do</h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 5.25h16.5v10.5H3.75zm3 13.5h10.5M9 12h6m-6-3h6" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Professional Design</h3>
+              <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                <li>Modern layouts</li>
+                <li>Mobile-friendly</li>
+                <li>Built for trust</li>
+              </ul>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 100ms">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 2.25 4.5 13.5h6L9.5 21.75 19 10.5h-6z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Fast &amp; Reliable</h3>
+              <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                <li>Optimized performance</li>
+                <li>Fast loading speeds</li>
+                <li>Secure hosting options</li>
+              </ul>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 200ms">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 12a8.25 8.25 0 1 1 16.5 0M3.75 12v3a2.25 2.25 0 0 0 2.25 2.25h.75v-6h-.75A2.25 2.25 0 0 0 3.75 12Zm16.5 0v3a2.25 2.25 0 0 1-2.25 2.25h-.75v-6h.75a2.25 2.25 0 0 1 2.25 2.25Z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Ongoing Support</h3>
+              <ul class="mt-3 space-y-1.5 text-sm text-muted">
+                <li>Updates handled for you</li>
+                <li>Direct communication</li>
+                <li>No technical headaches</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TEAM / ORIGIN ===================== -->
+      <section class="relative border-t border-line bg-white py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal text-center">
+            <p class="section-eyebrow">Our Story</p>
+            <h2 class="section-heading">Who's Behind GroundWire</h2>
+          </div>
+
+          <div class="reveal mt-12 grid gap-12 lg:grid-cols-2 lg:items-start" style="transition-delay: 100ms">
+
+            <!-- Story copy -->
+            <div class="space-y-6 text-muted">
+              <p>GroundWire was founded by four friends brought together by a shared passion for technology and digital creation. Two of us come from backgrounds in competitive computer science and software development — where precision, problem-solving, and performance are second nature.</p>
+              <p>The other two bring years of experience in video production, editing, and visual storytelling. That mix gives our team a strong creative perspective alongside serious technical depth.</p>
+              <p>We believe great websites are built where thoughtful design and solid engineering meet. GroundWire was created from a simple idea: businesses shouldn&rsquo;t have to choose between beautiful design and reliable performance.</p>
+              <p>Every project is approached with curiosity, attention to detail, and a commitment to craftsmanship. We enjoy solving problems, refining ideas, and creating websites that earn trust from the very first visit.</p>
+              <p>For us, building websites isn&rsquo;t just a service &mdash; it&rsquo;s an opportunity to create something meaningful alongside the people we work with.</p>
+            </div>
+
+            <!-- Team photo placeholder -->
+            <!-- TEAM_PHOTO_PLACEHOLDER: Replace this block with a real team photo or individual founder headshots -->
+            <div class="flex items-center justify-center rounded-xl border border-line bg-background p-8 lg:min-h-[320px]">
+              <div class="text-center">
+                <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                  </svg>
+                </div>
+                <p class="text-sm font-medium text-heading">Team Photo Coming Soon</p>
+                <p class="mt-1 text-xs text-muted">The four founders of GroundWire</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== VALUES ===================== -->
+      <section class="relative border-t border-line py-20">
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Our Values</p>
+            <h2 class="section-heading">Why Small Businesses Choose GroundWire</h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover">
+              <div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33" />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Affordable Pricing</h3>
+              <p class="mt-2 text-sm text-muted">Professional websites at rates built for small businesses &mdash; no agency markups, no surprise fees.</p>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 60ms">
+              <div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Fast Turnaround</h3>
+              <p class="mt-2 text-sm text-muted">We move quickly without cutting corners. Most projects are live within weeks, not months.</p>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 120ms">
+              <div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 8.25h3m-3 3h3m-3 3h3" />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Mobile-First Design</h3>
+              <p class="mt-2 text-sm text-muted">Every site is designed for the device your customers actually use &mdash; their phone.</p>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 180ms">
+              <div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Direct Support</h3>
+              <p class="mt-2 text-sm text-muted">You work with us directly &mdash; no ticket queues, no outsourcing, no runaround.</p>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 240ms">
+              <div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold">No Long-Term Contracts</h3>
+              <p class="mt-2 text-sm text-muted">Stay because we earn it. Monthly plans are flexible &mdash; no lock-in, no penalties for leaving.</p>
+            </div>
+
+            <div class="card-surface reveal hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 300ms">
+              <div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Local Business Focus</h3>
+              <p class="mt-2 text-sm text-muted">We specialize in local service businesses. We understand your customers, your market, and what converts.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL CTA ===================== -->
+      <section class="relative bg-navy py-20">
+        <div class="relative mx-auto max-w-2xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <h2 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Let's Build Something For Your Business</h2>
+            <a href="contact.html" class="btn-primary mt-8 inline-flex">Get A Free Quote</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="relative bg-navy pt-12 pb-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto" />
+            <p class="mt-2 text-xs uppercase tracking-[0.2em] text-ink-muted">Web Solutions</p>
+            <p class="mt-4 text-sm text-ink-muted">
+              We <span class="text-accent">Connect</span> Businesses To Their Customers.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Navigate</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="index.html" class="hover:text-accent">Home</a></li>
+              <li><a href="services.html" class="hover:text-accent">Services</a></li>
+              <li><a href="work.html" class="hover:text-accent">Work</a></li>
+              <li><a href="about.html" class="hover:text-accent">About</a></li>
+              <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Contact</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="mailto:groundwirewebsolutions@gmail.com" class="hover:text-accent">groundwirewebsolutions@gmail.com</a></li>
+              <li>Serving local businesses everywhere</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Follow Us</h3>
+            <div class="mt-4 flex gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61591482593823" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/groundwirewebsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.78.22 2.4.46.65.25 1.2.6 1.74 1.13.53.54.88 1.09 1.13 1.74.24.62.41 1.34.46 2.4.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.78-.46 2.4a4.7 4.7 0 0 1-1.13 1.74 4.7 4.7 0 0 1-1.74 1.13c-.62.24-1.34.41-2.4.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.78-.22-2.4-.46a4.7 4.7 0 0 1-1.74-1.13 4.7 4.7 0 0 1-1.13-1.74c-.24-.62-.41-1.34-.46-2.4C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.78.46-2.4.25-.65.6-1.2 1.13-1.74A4.7 4.7 0 0 1 5.39.61c.62-.24 1.34-.41 2.4-.46C8.85.1 9.19.09 11.91.09Zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.8.4-1.15.74-.34.35-.56.69-.74 1.15-.14.35-.3.88-.34 1.85C3.83 9 3.82 9.32 3.82 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.8.74 1.15.35.34.69.56 1.15.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.8-.4 1.15-.74.34-.35.56-.69.74-1.15.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3 3 0 0 0-.74-1.15 3 3 0 0 0-1.15-.74c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06ZM12 6.87a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-2.83a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@groundwirewebsolutions" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16.6 5.82a4.92 4.92 0 0 1-1.02-2.07h-3.07v12.86a2.93 2.93 0 1 1-2.07-2.8V10.8a5.99 5.99 0 0 0-1-.08A6 6 0 1 0 15.5 16.7V9.7a7.93 7.93 0 0 0 4.5 1.4V8.06a4.92 4.92 0 0 1-3.4-2.24Z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@GroundWireWebSolutions" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77A26.3 26.3 0 0 0 2 12a26.3 26.3 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26.3 26.3 0 0 0 22 12a26.3 26.3 0 0 0-.42-4.81ZM9.96 15.02V8.98L15.5 12l-5.54 3.02Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-ink-muted sm:flex-row">
+          <p>&copy; <span id="year"></span> GroundWire Web Solutions. All rights reserved.</p>
+          <p>We Connect Businesses To Their Customers.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

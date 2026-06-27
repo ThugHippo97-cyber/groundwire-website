@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F7FB;
+  color: #51607A;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-card transition-all duration-200 hover:bg-[#0356a8] hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white px-6 py-3 text-sm font-semibold text-heading transition-all duration-200 hover:border-primary/50 hover:text-primary hover:shadow-card;
+  }
+
+  .nav-link.is-active {
+    @apply text-accent;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+
+  .section-heading {
+    @apply mt-3 font-display text-3xl font-bold tracking-tight text-heading sm:text-4xl;
+  }
+
+  .card-surface {
+    @apply rounded-xl border border-line bg-surface p-7 shadow-card transition-all duration-200;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-4 duration-700 ease-out;
+    transition-property: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Logo is white+cyan artwork on a baked dark background; screen blend drops the
+   dark backdrop out against the navy header/footer/intro so there's no seam. */
+.brand-logo {
+  mix-blend-mode: screen;
+}
+
+.dash-line {
+  stroke-dasharray: 6 6;
+  animation: dash-flow 3s linear infinite;
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+/* Hero laptop mockup — the chassis (lid, hinge, base, shadow) is drawn as an
+   SVG illustration with its perspective baked into the artwork, rather than
+   built from flat CSS-rotated divs (that approach read as a flat rectangle
+   no matter how it was tilted). The carousel screen sits as a precisely
+   positioned rectangular HTML overlay on top of the SVG's drawn screen area,
+   so the content itself stays perfectly legible — only the surrounding
+   chassis carries the perspective. A small whole-rig tilt on hover (applied
+   via --laptop-rx/--laptop-ry, set from main.js) adds parallax without
+   distorting the drawn artwork. */
+.laptop-stage {
+  perspective: 2000px;
+}
+
+.laptop-rig {
+  transform-style: preserve-3d;
+  transform: rotateX(var(--laptop-rx, 0deg)) rotateY(var(--laptop-ry, 0deg));
+  transition: transform 0.4s ease-out;
+}
+
+/* ===== Intro overlay animation ===== */
+.skip-intro #intro-overlay {
+  display: none;
+}
+
+#intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #0F1B2D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#intro-overlay.intro-exit {
+  animation: intro-slide-up 0.55s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes intro-slide-up {
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(-100%); opacity: 1; }
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.intro-logo {
+  width: clamp(180px, 30vw, 280px);
+  opacity: 0;
+  animation: intro-logo-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+@keyframes intro-logo-in {
+  from { opacity: 0; transform: scale(0.88); filter: blur(4px); }
+  to   { opacity: 1; transform: scale(1);    filter: blur(0px); }
+}
+
+.intro-tagline {
+  margin: 0;
+  color: #B0B0B0;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: intro-tagline-in 0.5s ease-out 0.75s forwards;
+}
+
+@keyframes intro-tagline-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Radial ambient glow: sits behind the transparent WebGL canvas to give the
+   laptop a "floating in light" look rather than sitting in pure black space. */
+#laptop-3d-stage {
+  background: radial-gradient(ellipse 80% 65% at 50% 46%, rgba(0, 183, 255, 0.13) 0%, rgba(0, 183, 255, 0.04) 45%, transparent 70%);
+}
+
+/* ===== Laptop opening animation (tethered to intro overlay exit) ===== */
+
+/* Screen starts clipped (lid-closed). JS drives the actual transition at the
+   right moment — see initIntro() in main.js — because laptop3d.js sets an
+   inline style.transition that would override a pure-CSS approach. */
+html.laptop-pre-intro #hero-screen {
+  clip-path: inset(0 0 100% 0 round 4px);
+}
+
+/* 3D stage: subtle rise + fade, delayed to match when the overlay clears the hero. */
+html.laptop-pre-intro #laptop-3d-stage {
+  transform: translateY(28px);
+  opacity: 0.2;
+}
+
+#laptop-3d-stage {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.42s,
+              opacity 0.65s ease-out 0.38s;
+}
+
+/* SVG fallback chassis: same rise effect */
+html.laptop-pre-intro #laptop-fallback {
+  transform: translateY(28px);
+  opacity: 0;
+}
+
+#laptop-fallback {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.42s,
+              opacity 0.65s ease-out 0.38s;
+}
+
+/* ===== Page transitions ===== */
+/* Transition always present so browser can interpolate on both enter and exit */
+body {
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+body.page-transition-out {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition-timing-function: ease-in;
+  transition-duration: 0.22s;
+  pointer-events: none;
+}
+
+/* ===== Comparison table ===== */
+.check {
+  display: inline-block;
+  color: #0466C8;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.dash {
+  display: inline-block;
+  color: rgba(81, 96, 122, 0.45);
+  font-size: 1rem;
+  line-height: 1;
+}

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>html,body{background:#0F1B2D}body{opacity:0;transform:translateY(6px)}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GroundWire Web Solutions | Websites That Bring Local Businesses More Customers</title>
+    <meta
+      name="description"
+      content="GroundWire Web Solutions builds modern, mobile-friendly, lead-focused websites for local businesses, contractors, restaurants, and creators. Get a free quote today."
+    />
+    <link rel="icon" href="/logo/groundwire-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js"></script>
+    <!-- Intro gate: runs before first paint so repeat visitors never see the overlay flash -->
+    <script>
+      try {
+        var _ts = localStorage.getItem('gw_intro_ts');
+        if (_ts && (Date.now() - parseInt(_ts, 10)) < 86400000) {
+          document.documentElement.classList.add('skip-intro');
+        } else {
+          document.documentElement.classList.add('laptop-pre-intro');
+        }
+      } catch {
+        document.documentElement.classList.add('laptop-pre-intro');
+      }
+    </script>
+  </head>
+  <body class="bg-background font-sans text-body antialiased">
+
+    <!-- ===================== INTRO OVERLAY ===================== -->
+    <div id="intro-overlay" aria-hidden="true">
+      <div class="intro-content">
+        <img src="/logo/groundwire-lockup.png" alt="" class="brand-logo intro-logo" />
+        <p class="intro-tagline">We Connect Businesses To Their Customers.</p>
+      </div>
+    </div>
+
+    <!-- Skip link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:font-semibold"
+    >
+      Skip to main content
+    </a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="index.html" class="flex items-center" aria-label="GroundWire Web Solutions home">
+          <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto sm:h-9" />
+        </a>
+
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">About</a>
+        </nav>
+
+        <div class="hidden lg:block">
+          <a href="contact.html" class="btn-primary !px-5 !py-2.5 !text-xs">Get A Free Quote</a>
+        </div>
+
+        <button
+          id="nav-toggle"
+          type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-ink lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="icon-burger" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav
+        id="mobile-nav"
+        class="hidden border-t border-white/10 bg-navy px-6 py-4 lg:hidden"
+        aria-label="Mobile"
+      >
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">About</a>
+          <a href="contact.html" class="btn-primary mt-2 w-full">Get A Free Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- ===================== HERO ===================== -->
+      <section id="top" class="relative overflow-hidden bg-navy pt-28 pb-14 sm:pt-32 sm:pb-16">
+
+        <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
+          <div class="reveal">
+            <p class="section-eyebrow text-accent">GroundWire Web Solutions</p>
+            <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              We Build Websites That Bring
+              <span class="text-accent">Local Businesses More Customers</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg text-ink-muted">
+              Modern, conversion-driven design built specifically for local service businesses&mdash;handled start to finish by GroundWire.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#quote" class="btn-primary">Get A Free Quote</a>
+              <a href="work.html" class="btn-secondary">View Our Work</a>
+            </div>
+            <p class="mt-6 flex items-center gap-2 text-xs uppercase tracking-wide text-ink-muted">
+              <span class="h-px w-8 bg-accent/60"></span>
+              We Connect Businesses To Their Customers
+            </p>
+          </div>
+
+          <!-- Rotating site showcase -->
+          <div id="hero-showcase" class="reveal relative" style="transition-delay: 150ms">
+            <div class="relative mx-auto max-w-lg lg:max-w-none">
+              <!-- Floor shadow, gives the laptop a sense of resting on a surface -->
+              <div class="pointer-events-none absolute -bottom-5 left-1/2 h-8 w-[80%] -translate-x-1/2 rounded-full bg-black/60 blur-2xl" aria-hidden="true"></div>
+
+              <!-- 3D laptop stage: a real GLB model (Three.js + CSS3DRenderer).
+                   The screen mesh (Display.002) is hidden in WebGL so the live
+                   HTML carousel — rendered by CSS3DRenderer using the exact
+                   same camera — shows through the cutout in perfect lockstep
+                   as the model tilts. The carousel DOM node itself lives in
+                   the fallback block below and is moved here once the model
+                   has loaded; see src/laptop3d.js. -->
+              <div id="laptop-3d-stage" class="laptop-3d-stage relative aspect-[1000/720] w-full">
+                <div class="laptop-underglow pointer-events-none absolute inset-0 -z-10 animate-pulse-glow rounded-full bg-primary/35 blur-[90px]" aria-hidden="true"></div>
+                <div id="laptop-css3d-root" class="absolute inset-0 overflow-hidden"></div>
+                <canvas id="laptop-canvas" class="pointer-events-none absolute inset-0 h-full w-full"></canvas>
+                <div id="laptop-loading" class="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <span class="h-9 w-9 animate-spin rounded-full border-2 border-primary/25 border-t-primary"></span>
+                </div>
+              </div>
+
+              <!-- Fallback: the chassis below is a drawn SVG illustration
+                   (lid, hinge, base — perspective baked into the artwork), with
+                   the live carousel overlaid as a precise rectangular viewport
+                   on top of the drawn screen area. Used only when WebGL is
+                   unavailable or the 3D model fails to load — otherwise
+                   src/laptop3d.js hides this block and moves #hero-screen
+                   into the 3D stage above. -->
+              <div id="laptop-fallback" class="hidden">
+              <div id="laptop-stage" class="laptop-stage relative">
+                <div id="laptop-rig" class="laptop-rig relative aspect-[1000/720] w-full shadow-glow-lg">
+                  <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lidGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#2e2e2e" />
+                        <stop offset="100%" stop-color="#0a0a0a" />
+                      </linearGradient>
+                      <linearGradient id="baseGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#2a2a2a" />
+                        <stop offset="100%" stop-color="#050505" />
+                      </linearGradient>
+                      <filter id="camGlow">
+                        <feGaussianBlur stdDeviation="4" />
+                      </filter>
+                    </defs>
+
+                    <!-- Lid (the screen frame) -->
+                    <rect x="30" y="10" width="940" height="625" rx="28" fill="url(#lidGradient)" />
+                    <!-- Subtle top highlight, suggests light catching the lid edge -->
+                    <line x1="70" y1="16" x2="930" y2="16" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2" stroke-linecap="round" />
+                    <!-- Camera -->
+                    <circle cx="500" cy="26" r="10" fill="#00B7FF" opacity="0.35" filter="url(#camGlow)" />
+                    <circle cx="500" cy="26" r="3.2" fill="#00B7FF" />
+
+                    <!-- Hinge seam -->
+                    <rect x="40" y="628" width="920" height="22" rx="5" fill="#040404" />
+
+                    <!-- Base / keyboard deck, splayed wider at front for perspective -->
+                    <path d="M40,650 L960,650 L1015,702 L-15,702 Z" fill="url(#baseGradient)" />
+                    <!-- Front lip / trackpad latch -->
+                    <rect x="460" y="695" width="80" height="10" rx="5" fill="#1a1a1a" />
+                  </svg>
+
+                  <!-- Live screen viewport — a strict rectangular overlay positioned
+                       to match the SVG's drawn screen area exactly -->
+                  <div class="absolute overflow-hidden" style="left: 6%; top: 5.5556%; width: 88%; height: 76.3889%;">
+                    <div id="hero-screen" class="group relative h-full w-full overflow-hidden bg-white">
+                      <!-- Panel: Rodeo Shine Window Cleaning (real client, real screenshot) -->
+                      <div
+                        class="hero-panel absolute inset-0 opacity-100"
+                        data-name="Rodeo Shine Window Cleaning"
+                        data-tag="Live Client &mdash; Real Screenshot"
+                      >
+                        <img
+                          src="/screenshots/rodeo-shine-hero.jpg"
+                          alt="Rodeo Shine Window Cleaning homepage"
+                          class="h-full w-full object-cover object-top"
+                        />
+                      </div>
+
+                      <!-- Panel: NorthStar Landscaping -->
+                      <div
+                        class="hero-panel absolute inset-0 flex flex-col bg-[#0b1d12] text-white opacity-0"
+                        data-name="NorthStar Landscaping"
+                        data-tag="Example &mdash; Landscaping"
+                      >
+                        <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                          <span class="text-[10px] font-bold tracking-[0.2em]">NORTHSTAR</span>
+                          <span class="h-1.5 w-1.5 rounded-full bg-[#3ddc84]"></span>
+                        </div>
+                        <div class="flex-1 space-y-3 p-4">
+                          <p class="text-sm font-bold leading-tight">Beautiful Yards,<br />Built To Last.</p>
+                          <div class="h-14 rounded bg-gradient-to-br from-[#1f5f3a] to-[#0b1d12]"></div>
+                          <span class="inline-block rounded bg-[#3ddc84] px-3 py-1.5 text-[10px] font-semibold text-[#0b1d12]">Get A Quote</span>
+                        </div>
+                      </div>
+
+                      <!-- Panel: Bloom & Birch Boutique -->
+                      <div
+                        class="hero-panel absolute inset-0 flex flex-col bg-[#231019] text-white opacity-0"
+                        data-name="Bloom &amp; Birch Boutique"
+                        data-tag="Example &mdash; Retail Boutique"
+                      >
+                        <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                          <span class="text-[10px] font-bold tracking-[0.2em]">BLOOM &amp; BIRCH</span>
+                          <span class="h-1.5 w-1.5 rounded-full bg-[#e8a0bf]"></span>
+                        </div>
+                        <div class="flex-1 space-y-3 p-4">
+                          <p class="text-sm font-bold leading-tight">Handmade Goods,<br />Delivered With Care.</p>
+                          <div class="grid grid-cols-3 gap-2">
+                            <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                            <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                            <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                          </div>
+                          <span class="inline-block rounded bg-[#e8a0bf] px-3 py-1.5 text-[10px] font-semibold text-[#231019]">Shop Now</span>
+                        </div>
+                      </div>
+
+                      <!-- Panel: Riverstone Coffee -->
+                      <div
+                        class="hero-panel absolute inset-0 flex flex-col bg-[#221404] text-white opacity-0"
+                        data-name="Riverstone Coffee"
+                        data-tag="Example &mdash; Caf&eacute;"
+                      >
+                        <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                          <span class="text-[10px] font-bold tracking-[0.2em]">RIVERSTONE</span>
+                          <span class="h-1.5 w-1.5 rounded-full bg-[#d99248]"></span>
+                        </div>
+                        <div class="flex-1 space-y-3 p-4">
+                          <p class="text-sm font-bold leading-tight">Locally Roasted,<br />Always Fresh.</p>
+                          <div class="space-y-1.5">
+                            <div class="h-2 w-3/4 rounded-full bg-white/10"></div>
+                            <div class="h-2 w-2/3 rounded-full bg-white/10"></div>
+                            <div class="h-2 w-1/2 rounded-full bg-white/10"></div>
+                          </div>
+                          <span class="inline-block rounded bg-[#d99248] px-3 py-1.5 text-[10px] font-semibold text-[#221404]">View Menu</span>
+                        </div>
+                      </div>
+
+                      <!-- Reflective screen glare -->
+                      <div class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-transparent via-white/0 to-white/15"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <!-- Indicators -->
+              <div id="hero-dots" class="mt-6 flex items-center justify-center gap-2">
+                <button type="button" class="hero-dot h-2 w-6 rounded-full bg-primary transition-all duration-300" data-index="0" aria-label="Show Rodeo Shine Window Cleaning"></button>
+                <button type="button" class="hero-dot h-2 w-2 rounded-full bg-white/20 transition-all duration-300" data-index="1" aria-label="Show NorthStar Landscaping"></button>
+                <button type="button" class="hero-dot h-2 w-2 rounded-full bg-white/20 transition-all duration-300" data-index="2" aria-label="Show Bloom &amp; Birch Boutique"></button>
+                <button type="button" class="hero-dot h-2 w-2 rounded-full bg-white/20 transition-all duration-300" data-index="3" aria-label="Show Riverstone Coffee"></button>
+              </div>
+              <p id="hero-caption" class="mt-3 text-center text-xs uppercase tracking-wide text-muted">
+                Rodeo Shine Window Cleaning &mdash; Live Client &mdash; Real Screenshot
+              </p>
+
+              <!-- Circuit accent overlay -->
+              <svg class="pointer-events-none absolute -bottom-2 -right-6 h-24 w-24 text-primary/50" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                <path class="dash-line" d="M10 90 L40 90 L40 60 L70 60 L70 20 L90 20" stroke="currentColor" stroke-width="2" />
+                <circle cx="10" cy="90" r="3" fill="currentColor" />
+                <circle cx="90" cy="20" r="3" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TRUST STRIP ===================== -->
+      <section class="relative border-t border-line bg-white py-6">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center text-xs font-medium uppercase tracking-wide text-muted">
+            <span>Built For Local Service Businesses</span>
+            <span class="hidden h-1 w-1 rounded-full bg-primary/40 sm:block" aria-hidden="true"></span>
+            <span>Fast Turnaround</span>
+            <span class="hidden h-1 w-1 rounded-full bg-primary/40 sm:block" aria-hidden="true"></span>
+            <span>Mobile-First Design</span>
+            <span class="hidden h-1 w-1 rounded-full bg-primary/40 sm:block" aria-hidden="true"></span>
+            <span>Lead-Focused Websites</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FEATURED WORK PREVIEW ===================== -->
+      <section id="projects" class="relative border-t border-line py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Featured Work</p>
+            <h2 class="section-heading">Real Sites. Real Businesses.</h2>
+            <p class="mt-4 text-muted">A look at the kind of websites we build &mdash; including one currently live for a real client.</p>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-3">
+            <!-- Project: Rodeo Shine Window Cleaning (real client, real screenshot) -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover">
+              <div class="relative aspect-[16/10] w-full overflow-hidden">
+                <img
+                  src="/screenshots/rodeo-shine-hero.jpg"
+                  alt="Rodeo Shine Window Cleaning homepage"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-base font-semibold">Rodeo Shine Window Cleaning</h3>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Window Cleaning Service &middot; Burleson, TX</p>
+              </div>
+            </article>
+
+            <!-- Project: NorthStar Landscaping -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 100ms">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#0b1d12] text-white"><span class="absolute right-2 top-2 z-10 rounded-md bg-navy/85 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">Sample Concept</span>
+                <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                  <span class="text-[10px] font-bold tracking-[0.2em]">NORTHSTAR</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#3ddc84]"></span>
+                </div>
+                <div class="space-y-3 p-4">
+                  <p class="text-sm font-bold leading-tight">Beautiful Yards,<br />Built To Last.</p>
+                  <div class="h-14 rounded bg-gradient-to-br from-[#1f5f3a] to-[#0b1d12]"></div>
+                  <span class="inline-block rounded bg-[#3ddc84] px-3 py-1.5 text-[10px] font-semibold text-[#0b1d12]">Get A Quote</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-base font-semibold">NorthStar Landscaping</h3>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Landscaping Company &middot; Sample Concept</p>
+              </div>
+            </article>
+
+            <!-- Project: Bloom & Birch Boutique -->
+            <article class="card-surface reveal !p-0 overflow-hidden hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 200ms">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#231019] text-white"><span class="absolute right-2 top-2 z-10 rounded-md bg-navy/85 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">Sample Concept</span>
+                <div class="flex items-center justify-between border-b border-white/10 px-4 py-2.5">
+                  <span class="text-[10px] font-bold tracking-[0.2em]">BLOOM &amp; BIRCH</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#e8a0bf]"></span>
+                </div>
+                <div class="space-y-3 p-4">
+                  <p class="text-sm font-bold leading-tight">Handmade Goods,<br />Delivered With Care.</p>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                    <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                    <div class="h-10 rounded bg-[#e8a0bf]/20"></div>
+                  </div>
+                  <span class="inline-block rounded bg-[#e8a0bf] px-3 py-1.5 text-[10px] font-semibold text-[#231019]">Shop Now</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-base font-semibold">Bloom &amp; Birch Boutique</h3>
+                <p class="mt-1 text-xs uppercase tracking-wide text-muted">Retail Boutique &middot; Sample Concept</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="reveal mt-10 text-center">
+            <a href="work.html" class="btn-secondary">View All Work</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROCESS SECTION ===================== -->
+      <section id="process" class="relative border-t border-line bg-white py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">How It Works</p>
+            <h2 class="section-heading">Simple Process. Professional Results.</h2>
+          </div>
+
+          <div class="relative mt-14">
+            <!-- Connecting line (desktop) -->
+            <div class="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent lg:block"></div>
+
+            <div class="grid gap-12 lg:grid-cols-4 lg:gap-8">
+              <div class="reveal relative text-center">
+                <div class="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-white shadow-card">
+                  <span class="text-sm font-bold text-primary">01</span>
+                </div>
+                <h3 class="mt-5 text-base font-semibold">Discovery Call</h3>
+                <p class="mt-2 text-sm text-muted">We learn about your business and goals.</p>
+              </div>
+
+              <div class="reveal relative text-center" style="transition-delay: 100ms">
+                <div class="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-white shadow-card">
+                  <span class="text-sm font-bold text-primary">02</span>
+                </div>
+                <h3 class="mt-5 text-base font-semibold">Design &amp; Build</h3>
+                <p class="mt-2 text-sm text-muted">We craft your site around your brand.</p>
+              </div>
+
+              <div class="reveal relative text-center" style="transition-delay: 200ms">
+                <div class="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-white shadow-card">
+                  <span class="text-sm font-bold text-primary">03</span>
+                </div>
+                <h3 class="mt-5 text-base font-semibold">Review &amp; Revisions</h3>
+                <p class="mt-2 text-sm text-muted">We refine details until it's right.</p>
+              </div>
+
+              <div class="reveal relative text-center" style="transition-delay: 300ms">
+                <div class="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-white shadow-card">
+                  <span class="text-sm font-bold text-primary">04</span>
+                </div>
+                <h3 class="mt-5 text-base font-semibold">Launch &amp; Support</h3>
+                <p class="mt-2 text-sm text-muted">We launch your site and stay on call.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== QUOTE / LEAD CAPTURE ===================== -->
+      <section id="quote" class="relative border-t border-line py-20">
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal grid gap-12 lg:grid-cols-2 lg:items-center">
+
+            <!-- Left: value prop -->
+            <div>
+              <h2 class="font-display text-3xl font-extrabold tracking-tight text-heading sm:text-4xl">Get A Website That Actually Brings You Customers.</h2>
+              <p class="mt-4 text-lg text-muted">Tell us a bit about your business and we'll get back to you with a free quote.</p>
+              <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-primary">Ready to grow?</p>
+              <ul class="mt-5 space-y-5">
+                <li class="flex items-start gap-4">
+                  <div class="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-heading">Free Strategy Call</p>
+                    <p class="mt-0.5 text-sm text-muted">We'll map out your project, no strings attached.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-heading">Fast Response</p>
+                    <p class="mt-0.5 text-sm text-muted">Expect a custom quote in your inbox within 24 hours.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-heading">Zero Risk</p>
+                    <p class="mt-0.5 text-sm text-muted">No ongoing commitments required for launch packages.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: form -->
+            <div>
+              <form class="grid gap-4 text-left sm:grid-cols-2" action="#" method="post">
+                <div>
+                  <label for="cta-name" class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-muted">Your Name</label>
+                  <input
+                    id="cta-name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Jane Smith"
+                    class="w-full rounded-md border border-[#CBD5E1] bg-white px-4 py-3 text-sm text-heading placeholder:text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label for="cta-email" class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-muted">Email Address</label>
+                  <input
+                    id="cta-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="you@business.com"
+                    class="w-full rounded-md border border-[#CBD5E1] bg-white px-4 py-3 text-sm text-heading placeholder:text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label for="cta-business-name" class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-muted">Business Name</label>
+                  <input
+                    id="cta-business-name"
+                    name="business_name"
+                    type="text"
+                    required
+                    placeholder="Rodeo Shine Window Cleaning"
+                    class="w-full rounded-md border border-[#CBD5E1] bg-white px-4 py-3 text-sm text-heading placeholder:text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label for="cta-business-type" class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-muted">Business Type</label>
+                  <div class="relative">
+                    <select
+                      id="cta-business-type"
+                      name="business_type"
+                      required
+                      class="w-full appearance-none rounded-md border border-[#CBD5E1] bg-white px-4 py-3 text-sm text-heading focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="" disabled selected hidden>Select an industry</option>
+                      <option>Home Services / Contracting</option>
+                      <option>Landscaping</option>
+                      <option>Retail / Boutique</option>
+                      <option>Restaurant / Caf&eacute;</option>
+                      <option>Professional Services</option>
+                      <option>Health &amp; Wellness</option>
+                      <option>Other</option>
+                    </select>
+                    <svg class="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label for="cta-description" class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-muted">Describe Your Business</label>
+                  <textarea
+                    id="cta-description"
+                    name="description"
+                    rows="4"
+                    placeholder="What does your business do, and what would you like your new website to help with?"
+                    class="w-full resize-none rounded-md border border-[#CBD5E1] bg-white px-4 py-3 text-sm text-heading placeholder:text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary sm:col-span-2">Get My Free Quote</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL CTA ===================== -->
+      <section class="relative bg-navy py-16">
+        <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <h2 class="font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">Your Competitors Are Already Online. Make Sure You're Ahead.</h2>
+            <a href="contact.html" class="btn-primary mt-8 inline-flex">Get Started</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="relative bg-navy pt-12 pb-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto" />
+            <p class="mt-2 text-xs uppercase tracking-[0.2em] text-ink-muted">Web Solutions</p>
+            <p class="mt-4 text-sm text-ink-muted">
+              We <span class="text-accent">Connect</span> Businesses To Their Customers.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Navigate</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="index.html" class="hover:text-accent">Home</a></li>
+              <li><a href="services.html" class="hover:text-accent">Services</a></li>
+              <li><a href="work.html" class="hover:text-accent">Work</a></li>
+              <li><a href="about.html" class="hover:text-accent">About</a></li>
+              <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Contact</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="mailto:groundwirewebsolutions@gmail.com" class="hover:text-accent">groundwirewebsolutions@gmail.com</a></li>
+              <li>Serving local businesses everywhere</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Follow Us</h3>
+            <div class="mt-4 flex gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61591482593823" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/groundwirewebsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.78.22 2.4.46.65.25 1.2.6 1.74 1.13.53.54.88 1.09 1.13 1.74.24.62.41 1.34.46 2.4.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.78-.46 2.4a4.7 4.7 0 0 1-1.13 1.74 4.7 4.7 0 0 1-1.74 1.13c-.62.24-1.34.41-2.4.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.78-.22-2.4-.46a4.7 4.7 0 0 1-1.74-1.13 4.7 4.7 0 0 1-1.13-1.74c-.24-.62-.41-1.34-.46-2.4C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.78.46-2.4.25-.65.6-1.2 1.13-1.74A4.7 4.7 0 0 1 5.39.61c.62-.24 1.34-.41 2.4-.46C8.85.1 9.19.09 11.91.09Zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.8.4-1.15.74-.34.35-.56.69-.74 1.15-.14.35-.3.88-.34 1.85C3.83 9 3.82 9.32 3.82 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.8.74 1.15.35.34.69.56 1.15.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.8-.4 1.15-.74.34-.35.56-.69.74-1.15.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3 3 0 0 0-.74-1.15 3 3 0 0 0-1.15-.74c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06ZM12 6.87a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-2.83a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@groundwirewebsolutions" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16.6 5.82a4.92 4.92 0 0 1-1.02-2.07h-3.07v12.86a2.93 2.93 0 1 1-2.07-2.8V10.8a5.99 5.99 0 0 0-1-.08A6 6 0 1 0 15.5 16.7V9.7a7.93 7.93 0 0 0 4.5 1.4V8.06a4.92 4.92 0 0 1-3.4-2.24Z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@GroundWireWebSolutions" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77A26.3 26.3 0 0 0 2 12a26.3 26.3 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26.3 26.3 0 0 0 22 12a26.3 26.3 0 0 0-.42-4.81ZM9.96 15.02V8.98L15.5 12l-5.54 3.02Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-ink-muted sm:flex-row">
+          <p>&copy; <span id="year"></span> GroundWire Web Solutions. All rights reserved.</p>
+          <p>We Connect Businesses To Their Customers.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>html,body{background:#0F1B2D}body{opacity:0;transform:translateY(6px)}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services &amp; Pricing | GroundWire Web Solutions</title>
+    <meta
+      name="description"
+      content="Three website packages built for local business growth: Launch Package, Growth System, and Operations Platform. See what's included and starting prices."
+    />
+    <link rel="icon" href="/logo/groundwire-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-background font-sans text-body antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:font-semibold"
+    >
+      Skip to main content
+    </a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="index.html" class="flex items-center" aria-label="GroundWire Web Solutions home">
+          <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto sm:h-9" />
+        </a>
+
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted transition-colors hover:text-white">About</a>
+        </nav>
+
+        <div class="hidden lg:block">
+          <a href="contact.html" class="btn-primary !px-5 !py-2.5 !text-xs">Get A Free Quote</a>
+        </div>
+
+        <button
+          id="nav-toggle"
+          type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-ink lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="icon-burger" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav
+        id="mobile-nav"
+        class="hidden border-t border-white/10 bg-navy px-6 py-4 lg:hidden"
+        aria-label="Mobile"
+      >
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Services</a>
+          <a href="work.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">Work</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-ink-muted hover:text-white">About</a>
+          <a href="contact.html" class="btn-primary mt-2 w-full">Get A Free Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- ===================== HERO ===================== -->
+      <section class="relative overflow-hidden bg-navy pt-28 pb-14 sm:pt-32 sm:pb-16">
+        <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <p class="section-eyebrow text-accent">Services</p>
+            <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">Website Solutions Built For Local Business Growth</h1>
+            <p class="mt-6 text-lg text-ink-muted">Three clear tiers, no confusing add-ons &mdash; pick the level of support your business needs today.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FULL TIER BREAKDOWN ===================== -->
+      <section id="pricing" class="relative border-t border-line bg-white py-20">
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Plans</p>
+            <h2 class="section-heading">Simple Pricing</h2>
+            <p class="mt-4 text-muted">Every project gets a custom quote &mdash; these ranges show what to expect.</p>
+          </div>
+
+          <div class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
+            <!-- Tier 1: Launch Package -->
+            <div class="card-surface reveal flex h-full flex-col gap-8 p-8">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-primary">Launch Package</p>
+                <h3 class="mt-3 text-2xl font-bold text-heading">$500 &ndash; $1,200</h3>
+                <p class="mt-0.5 text-xs uppercase tracking-wide text-muted">One-time</p>
+                <p class="mt-4 text-sm leading-relaxed text-muted">A clean, professional website to get your business online fast &mdash; no ongoing commitment required.</p>
+              </div>
+              <ul class="flex-1 space-y-3 text-sm text-muted">
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>3&ndash;5 page custom website</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Mobile-first responsive design</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Contact form &amp; on-page SEO</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Domain setup &amp; deployment</li>
+              </ul>
+              <a href="contact.html" class="btn-secondary w-full">Request This Plan</a>
+            </div>
+
+            <!-- Tier 2: Growth System -->
+            <div class="reveal relative flex h-full flex-col gap-8 rounded-xl border-2 border-primary bg-white p-8 pt-14 shadow-card-hover">
+              <span class="absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary px-4 py-1 text-[11px] font-semibold uppercase tracking-widest text-white">Most Popular</span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-primary">Growth System</p>
+                <h3 class="mt-3 text-2xl font-bold text-heading">$1,200 &ndash; $2,500</h3>
+                <p class="mt-0.5 text-xs uppercase tracking-wide text-muted">+ $75&ndash;$150 / month</p>
+                <p class="mt-4 text-sm leading-relaxed text-muted">A site built to actively generate leads &mdash; with ongoing support, analytics, and updates included monthly.</p>
+              </div>
+              <ul class="flex-1 space-y-3 text-sm text-muted">
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>5&ndash;12 page custom-designed website</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Conversion-focused service pages</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Lead capture &amp; quote funnels</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Analytics, CRM &amp; monthly maintenance</li>
+              </ul>
+              <a href="contact.html" class="btn-primary w-full">Request This Plan</a>
+            </div>
+
+            <!-- Tier 3: Operations Platform -->
+            <div class="card-surface reveal flex h-full flex-col gap-8 p-8" style="transition-delay: 100ms">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-primary">Operations Platform</p>
+                <h3 class="mt-3 text-2xl font-bold text-heading">$2,000 &ndash; $4,000</h3>
+                <p class="mt-0.5 text-xs uppercase tracking-wide text-muted">+ $150&ndash;$300 / month</p>
+                <p class="mt-4 text-sm leading-relaxed text-muted">A full digital system &mdash; backend automation, integrations, and continuous development built around your business.</p>
+              </div>
+              <ul class="flex-1 space-y-3 text-sm text-muted">
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>10&ndash;25+ page advanced web system</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Custom backend, dashboards &amp; automation</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Booking, accounts &amp; API integrations</li>
+                <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>Priority development queue</li>
+              </ul>
+              <a href="contact.html" class="btn-secondary w-full">Request This Plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== COMPARISON TABLE ===================== -->
+      <section class="relative border-t border-line bg-white py-20">
+        <div class="mx-auto max-w-5xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Compare</p>
+            <h2 class="section-heading">What's Included</h2>
+            <p class="mt-4 text-muted">A quick look at how the tiers stack up.</p>
+          </div>
+
+          <div class="reveal mt-10 overflow-x-auto rounded-xl border border-line">
+            <table class="w-full min-w-[600px] border-collapse text-sm">
+              <thead>
+                <tr class="border-b border-line">
+                  <th class="w-[38%] bg-background px-8 py-5 text-left text-xs font-semibold uppercase tracking-wide text-muted">Feature</th>
+                  <th class="bg-background px-6 py-5 text-center text-xs font-semibold uppercase tracking-wide text-heading">Launch</th>
+                  <th class="relative bg-primary/10 px-6 py-5 text-center text-xs font-semibold uppercase tracking-wide text-primary">
+                    Growth
+                    <span class="absolute -top-px left-1/2 -translate-x-1/2 rounded-b-full bg-primary px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">Popular</span>
+                  </th>
+                  <th class="bg-background px-6 py-5 text-center text-xs font-semibold uppercase tracking-wide text-heading">Operations</th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-line">
+                <!-- Price row -->
+                <tr class="bg-background">
+                  <td class="px-8 py-6 font-medium text-heading">Price</td>
+                  <td class="px-6 py-6 text-center text-muted">$500&ndash;$1,200<br><span class="text-xs">one-time</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center text-muted">$1,200&ndash;$2,500<br><span class="text-xs">+ $75&ndash;$150/mo</span></td>
+                  <td class="px-6 py-6 text-center text-muted">$2,000&ndash;$4,000<br><span class="text-xs">+ $150&ndash;$300/mo</span></td>
+                </tr>
+
+                <!-- Group: Design & Build -->
+                <tr class="bg-background">
+                  <td colspan="4" class="px-8 py-3 text-[11px] font-semibold uppercase tracking-widest text-primary">Design &amp; Build</td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Pages</td>
+                  <td class="px-6 py-6 text-center text-heading">3&ndash;5</td>
+                  <td class="bg-primary/5 px-6 py-6 text-center text-heading">5&ndash;12</td>
+                  <td class="px-6 py-6 text-center text-heading">10&ndash;25+</td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Mobile-First &amp; Custom Branding</td>
+                  <td class="px-6 py-6 text-center text-xs text-muted">Basic</td>
+                  <td class="bg-primary/5 px-6 py-6 text-center text-xs text-muted">Higher-end</td>
+                  <td class="px-6 py-6 text-center text-xs text-muted">Premium</td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Contact Form &amp; SEO Foundation</td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                </tr>
+
+                <!-- Group: Lead Generation -->
+                <tr class="bg-background">
+                  <td colspan="4" class="px-8 py-3 text-[11px] font-semibold uppercase tracking-widest text-primary">Lead Generation</td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Lead Capture &amp; Quote Funnels</td>
+                  <td class="px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Analytics &amp; CRM Tracking</td>
+                  <td class="px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                </tr>
+
+                <!-- Group: Systems & Support -->
+                <tr class="bg-background">
+                  <td colspan="4" class="px-8 py-3 text-[11px] font-semibold uppercase tracking-widest text-primary">Systems &amp; Support</td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Monthly Maintenance &amp; Hosting</td>
+                  <td class="px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Automation &amp; API Integrations</td>
+                  <td class="px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td class="px-8 py-6 text-muted">Priority Dev Queue</td>
+                  <td class="px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="bg-primary/5 px-6 py-6 text-center"><span class="dash" aria-label="Not included">&mdash;</span></td>
+                  <td class="px-6 py-6 text-center"><span class="check" aria-label="Included">&#10003;</span></td>
+                </tr>
+
+                <!-- CTA row -->
+                <tr class="border-t border-line bg-background">
+                  <td class="px-8 py-6"></td>
+                  <td class="px-6 py-6 text-center">
+                    <a href="contact.html" class="btn-secondary !px-5 !py-2.5 !text-xs">Get Started</a>
+                  </td>
+                  <td class="bg-primary/5 px-6 py-6 text-center">
+                    <a href="contact.html" class="btn-primary !px-5 !py-2.5 !text-xs">Get Started</a>
+                  </td>
+                  <td class="px-6 py-6 text-center">
+                    <a href="contact.html" class="btn-secondary !px-5 !py-2.5 !text-xs">Get Started</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SERVICES OFFERED ===================== -->
+      <section class="relative border-t border-line py-20">
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-eyebrow">Services</p>
+            <h2 class="section-heading">What We Offer</h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="card-surface reveal group hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.75H4.5A.75.75 0 0 0 3.75 4.5v15c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75v-5.25M9.75 3.75 20.25 14.25M20.25 8.25v-4.5h-4.5" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Website Design</h3>
+              <p class="mt-2 text-sm text-muted">Custom websites built for your business.</p>
+            </div>
+
+            <div class="card-surface reveal group hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 80ms">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Website Redesign</h3>
+              <p class="mt-2 text-sm text-muted">Upgrade outdated websites.</p>
+            </div>
+
+            <div class="card-surface reveal group hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 160ms">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.103.085m-5.81 5.61-2.087-2.087m-.683 6.66-2.001-2.001" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Maintenance &amp; Updates</h3>
+              <p class="mt-2 text-sm text-muted">We handle ongoing changes and upkeep.</p>
+            </div>
+
+            <div class="card-surface reveal group hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover" style="transition-delay: 240ms">
+              <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v3m0 0v3m0-3h3m-3 0h-3" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold">Local SEO Foundations</h3>
+              <p class="mt-2 text-sm text-muted">Help customers find you online.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL CTA ===================== -->
+      <section class="relative bg-navy py-20">
+        <div class="relative mx-auto max-w-2xl px-6 text-center lg:px-8">
+          <div class="reveal">
+            <h2 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Not Sure What You Need?</h2>
+            <p class="mt-4 text-lg text-ink-muted">Contact us and we'll recommend the right solution for your business.</p>
+            <a href="contact.html" class="btn-primary mt-8 inline-flex">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="relative bg-navy pt-12 pb-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img src="/logo/groundwire-lockup.png" alt="GroundWire Web Solutions" class="brand-logo h-8 w-auto" />
+            <p class="mt-2 text-xs uppercase tracking-[0.2em] text-ink-muted">Web Solutions</p>
+            <p class="mt-4 text-sm text-ink-muted">
+              We <span class="text-accent">Connect</span> Businesses To Their Customers.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Navigate</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="index.html" class="hover:text-accent">Home</a></li>
+              <li><a href="services.html" class="hover:text-accent">Services</a></li>
+              <li><a href="work.html" class="hover:text-accent">Work</a></li>
+              <li><a href="about.html" class="hover:text-accent">About</a></li>
+              <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Contact</h3>
+            <ul class="mt-4 space-y-3 text-sm text-ink-muted">
+              <li><a href="mailto:groundwirewebsolutions@gmail.com" class="hover:text-accent">groundwirewebsolutions@gmail.com</a></li>
+              <li>Serving local businesses everywhere</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-ink">Follow Us</h3>
+            <div class="mt-4 flex gap-3">
+              <a href="https://www.facebook.com/profile.php?id=61591482593823" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/groundwirewebsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.78.22 2.4.46.65.25 1.2.6 1.74 1.13.53.54.88 1.09 1.13 1.74.24.62.41 1.34.46 2.4.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.78-.46 2.4a4.7 4.7 0 0 1-1.13 1.74 4.7 4.7 0 0 1-1.74 1.13c-.62.24-1.34.41-2.4.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.78-.22-2.4-.46a4.7 4.7 0 0 1-1.74-1.13 4.7 4.7 0 0 1-1.13-1.74c-.24-.62-.41-1.34-.46-2.4C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.78.46-2.4.25-.65.6-1.2 1.13-1.74A4.7 4.7 0 0 1 5.39.61c.62-.24 1.34-.41 2.4-.46C8.85.1 9.19.09 11.91.09Zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.8.4-1.15.74-.34.35-.56.69-.74 1.15-.14.35-.3.88-.34 1.85C3.83 9 3.82 9.32 3.82 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.8.74 1.15.35.34.69.56 1.15.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.8-.4 1.15-.74.34-.35.56-.69.74-1.15.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3 3 0 0 0-.74-1.15 3 3 0 0 0-1.15-.74c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06ZM12 6.87a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-2.83a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@groundwirewebsolutions" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16.6 5.82a4.92 4.92 0 0 1-1.02-2.07h-3.07v12.86a2.93 2.93 0 1 1-2.07-2.8V10.8a5.99 5.99 0 0 0-1-.08A6 6 0 1 0 15.5 16.7V9.7a7.93 7.93 0 0 0 4.5 1.4V8.06a4.92 4.92 0 0 1-3.4-2.24Z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@GroundWireWebSolutions" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-ink-muted transition-colors hover:border-primary/50 hover:text-accent">
+                <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77A26.3 26.3 0 0 0 2 12a26.3 26.3 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26.3 26.3 0 0 0 22 12a26.3 26.3 0 0 0-.42-4.81ZM9.96 15.02V8.98L15.5 12l-5.54 3.02Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-ink-muted sm:flex-row">
+          <p>&copy; <span id="year"></span> GroundWire Web Solutions. All rights reserved.</p>
+          <p>We Connect Businesses To Their Customers.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
