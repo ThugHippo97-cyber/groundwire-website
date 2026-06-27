@@ -206,10 +206,10 @@ if (laptop3dStage && laptopCanvas && laptopCss3dRoot && heroScreen) {
 // Active nav highlighting — the site is split across pages now, so the
 // active link is whichever one points at the current page, not a scroll position.
 const navLinks = document.querySelectorAll(".nav-link");
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const currentPage = (window.location.pathname.split("/").pop() || "index").replace(/\.html$/, "");
 
 navLinks.forEach((link) => {
-  const linkPage = link.getAttribute("href").split("/").pop();
+  const linkPage = link.getAttribute("href").split("/").pop().replace(/\.html$/, "");
   link.classList.toggle("is-active", linkPage === currentPage);
 });
 
