@@ -245,6 +245,7 @@ document.querySelectorAll('form[action="#"]').forEach((form) => {
           </svg>
           <p class="text-lg font-semibold text-heading">You're all set!</p>
           <p class="text-sm text-muted max-w-xs">We received your request and will be in touch within 24 hours.</p>
+          <a href="questionnaire.html" class="mt-1 text-sm font-semibold text-primary hover:underline">Want to speed things up? Tell us more in our questionnaire &rarr;</a>
         </div>`;
     } catch {
       btn.disabled = false;
