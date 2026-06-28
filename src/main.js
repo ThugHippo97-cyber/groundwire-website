@@ -226,6 +226,27 @@ navLinks.forEach((link) => {
 // as success and only show an error on actual network failure.
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyG4EXE-P82Hp8QO32PJrfR02C4P4QtQOkEebMYNi97zOqg04F4guhft4PLj_fAtNcG/exec';
 
+// Plan pre-selection: services.html "Request This Plan" / "Get Started" links pass
+// ?plan=<tier>. Validate against the known tiers (so an arbitrary URL value can't
+// be injected into the page), then surface it to the visitor and fold it into the
+// lead's source + description so the chosen plan reaches the spreadsheet.
+const KNOWN_PLANS = ['Launch Package', 'Growth System', 'Operations Platform'];
+const planParam = new URLSearchParams(window.location.search).get('plan');
+const selectedPlan = KNOWN_PLANS.includes(planParam) ? planParam : null;
+
+if (selectedPlan) {
+  const planForm = document.querySelector('form[action="#"]');
+  if (planForm) {
+    const notice = document.createElement('div');
+    notice.className = 'sm:col-span-2 mb-2 rounded-md border border-primary/30 bg-primary/5 px-4 py-3 text-sm text-heading';
+    const strong = document.createElement('strong');
+    strong.className = 'text-primary';
+    strong.textContent = selectedPlan;
+    notice.append('You’re requesting the ', strong, ' plan — add your details below and we’ll follow up with next steps.');
+    planForm.prepend(notice);
+  }
+}
+
 document.querySelectorAll('form[action="#"]').forEach((form) => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -240,7 +261,11 @@ document.querySelectorAll('form[action="#"]').forEach((form) => {
     const source = page === 'contact' ? 'Contact Page' : 'Home Page';
 
     const params = new URLSearchParams(new FormData(form));
-    params.append('source', source);
+    if (selectedPlan) {
+      const desc = params.get('description') || '';
+      params.set('description', `Requested plan: ${selectedPlan}` + (desc ? `\n\n${desc}` : ''));
+    }
+    params.append('source', selectedPlan ? `${source} (${selectedPlan})` : source);
 
     try {
       await fetch(SCRIPT_URL, { method: 'POST', body: params, mode: 'no-cors' });
