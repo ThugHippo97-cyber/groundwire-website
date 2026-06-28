@@ -183,7 +183,14 @@ function enableFallbackLaptop() {
   });
 }
 
-if (laptop3dStage && laptopCanvas && laptopCss3dRoot && heroScreen) {
+// Only run the Three.js / CSS3DRenderer laptop on large, mouse-driven screens.
+// On touch devices the mouse-tilt has no payoff, the 628KB Three.js bundle is
+// wasted bandwidth, and iOS Safari mis-projects the CSS3D screen overlay so the
+// carousel floats out of the laptop screen. Those devices get the lightweight,
+// pixel-reliable SVG fallback (percentage-positioned screen) instead.
+const prefer3DLaptop = window.matchMedia("(min-width: 1024px) and (pointer: fine)").matches;
+
+if (prefer3DLaptop && laptop3dStage && laptopCanvas && laptopCss3dRoot && heroScreen) {
   import("./laptop3d.js")
     .then(({ initLaptop3D, supportsWebGL }) => {
       if (!supportsWebGL()) throw new Error("WebGL unavailable");
