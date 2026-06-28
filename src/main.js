@@ -188,7 +188,16 @@ function enableFallbackLaptop() {
 // wasted bandwidth, and iOS Safari mis-projects the CSS3D screen overlay so the
 // carousel floats out of the laptop screen. Those devices get the lightweight,
 // pixel-reliable SVG fallback (percentage-positioned screen) instead.
-const prefer3DLaptop = window.matchMedia("(min-width: 1024px) and (pointer: fine)").matches;
+// iOS/iPadOS Safari is the only engine with the CSS3D mis-projection bug, so
+// exclude it explicitly (iPadOS 13+ masquerades as "Macintosh" but reports touch
+// points, unlike a real Mac). Use any-pointer:fine — NOT pointer:fine — so
+// touchscreen Windows laptops (whose PRIMARY pointer reports coarse) still get the
+// 3D model as long as a mouse/trackpad is present.
+const isIOS =
+  /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+  (/macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+const prefer3DLaptop =
+  !isIOS && window.matchMedia("(min-width: 1024px) and (any-pointer: fine)").matches;
 
 if (prefer3DLaptop && laptop3dStage && laptopCanvas && laptopCss3dRoot && heroScreen) {
   import("./laptop3d.js")
@@ -235,7 +244,8 @@ const planParam = new URLSearchParams(window.location.search).get('plan');
 const selectedPlan = KNOWN_PLANS.includes(planParam) ? planParam : null;
 
 if (selectedPlan) {
-  const planForm = document.querySelector('form[action="#"]');
+  // Banner above whichever lead form is on this page (contact form OR questionnaire).
+  const planForm = document.querySelector('form[action="#"], #questionnaire-form');
   if (planForm) {
     const notice = document.createElement('div');
     notice.className = 'sm:col-span-2 mb-2 rounded-md border border-primary/30 bg-primary/5 px-4 py-3 text-sm text-heading';
@@ -245,6 +255,11 @@ if (selectedPlan) {
     notice.append('You’re requesting the ', strong, ' plan — add your details below and we’ll follow up with next steps.');
     planForm.prepend(notice);
   }
+  // Carry the plan along if the visitor jumps from the contact form to the
+  // questionnaire, so it's still captured there.
+  document.querySelectorAll('a[href^="questionnaire.html"]').forEach((a) => {
+    a.setAttribute('href', `questionnaire.html?plan=${encodeURIComponent(selectedPlan)}`);
+  });
 }
 
 document.querySelectorAll('form[action="#"]').forEach((form) => {
@@ -277,7 +292,7 @@ document.querySelectorAll('form[action="#"]').forEach((form) => {
           </svg>
           <p class="text-lg font-semibold text-heading">You're all set!</p>
           <p class="text-sm text-muted max-w-xs">We received your request and will be in touch within 24 hours.</p>
-          <a href="questionnaire.html" class="mt-1 text-sm font-semibold text-primary hover:underline">Want to speed things up? Tell us more in our questionnaire &rarr;</a>
+          <a href="questionnaire.html${selectedPlan ? `?plan=${encodeURIComponent(selectedPlan)}` : ''}" class="mt-1 text-sm font-semibold text-primary hover:underline">Want to speed things up? Tell us more in our questionnaire &rarr;</a>
         </div>`;
     } catch {
       btn.disabled = false;
@@ -334,8 +349,13 @@ if (questionnaireForm) {
     params.append('email', fd.get('email') || '');
     params.append('business_name', fd.get('business_name') || '');
     params.append('business_type', fd.get('business_type') || '');
-    params.append('description', lines.join('\n'));
-    params.append('source', 'Client Questionnaire');
+    const descBody = lines.join('\n');
+    if (selectedPlan) {
+      params.append('description', `Requested plan: ${selectedPlan}` + (descBody ? `\n\n${descBody}` : ''));
+    } else {
+      params.append('description', descBody);
+    }
+    params.append('source', selectedPlan ? `Client Questionnaire (${selectedPlan})` : 'Client Questionnaire');
 
     try {
       await fetch(SCRIPT_URL, { method: 'POST', body: params, mode: 'no-cors' });
