@@ -188,16 +188,18 @@ function enableFallbackLaptop() {
 // wasted bandwidth, and iOS Safari mis-projects the CSS3D screen overlay so the
 // carousel floats out of the laptop screen. Those devices get the lightweight,
 // pixel-reliable SVG fallback (percentage-positioned screen) instead.
-// iOS/iPadOS Safari is the only engine with the CSS3D mis-projection bug, so
-// exclude it explicitly (iPadOS 13+ masquerades as "Macintosh" but reports touch
-// points, unlike a real Mac). Use any-pointer:fine — NOT pointer:fine — so
-// touchscreen Windows laptops (whose PRIMARY pointer reports coarse) still get the
-// 3D model as long as a mouse/trackpad is present.
+// iOS/iPadOS Safari is the ONLY engine with the CSS3D mis-projection bug (the
+// carousel floats out of the laptop screen), so gate on exactly that — nothing
+// else. Media-query gates on width/pointer proved too brittle (Windows display
+// scaling makes a normal laptop report <1024px CSS width; touchscreen laptops
+// misreport pointer), wrongly dropping real desktops to the fallback. Everything
+// non-iOS runs the 3D path; the WebGL try/catch below covers any rare failure.
+// iPadOS 13+ masquerades as "Macintosh" but reports touch points (a real Mac
+// reports 0), so the second test catches it.
 const isIOS =
   /iphone|ipad|ipod/i.test(navigator.userAgent) ||
   (/macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
-const prefer3DLaptop =
-  !isIOS && window.matchMedia("(min-width: 1024px) and (any-pointer: fine)").matches;
+const prefer3DLaptop = !isIOS;
 
 if (prefer3DLaptop && laptop3dStage && laptopCanvas && laptopCss3dRoot && heroScreen) {
   import("./laptop3d.js")
