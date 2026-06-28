@@ -228,8 +228,9 @@ document.querySelectorAll('form[action="#"]').forEach((form) => {
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    const page = window.location.pathname.split('/').pop() || 'index.html';
-    const source = page === 'contact.html' ? 'Contact Page' : 'Home Page';
+    // Strip .html so this works on Cloudflare's pretty URLs (/contact) too.
+    const page = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
+    const source = page === 'contact' ? 'Contact Page' : 'Home Page';
 
     const params = new URLSearchParams(new FormData(form));
     params.append('source', source);
@@ -259,6 +260,75 @@ document.querySelectorAll('form[action="#"]').forEach((form) => {
     }
   });
 });
+
+// Questionnaire form — richer client-intake form. It posts to the same Apps
+// Script endpoint, but bundles its extra answers into the `description` field so
+// every answer lands in the lead email + sheet without changing the backend
+// schema. It carries action="#questionnaire" so the generic handler above skips it.
+const questionnaireForm = document.getElementById('questionnaire-form');
+if (questionnaireForm) {
+  questionnaireForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const btn = questionnaireForm.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const fd = new FormData(questionnaireForm);
+    // Fields prefixed q_ are questionnaire detail; compose them into one
+    // readable block under "description" so nothing is lost server-side.
+    const detailLabels = {
+      q_phone: 'Phone',
+      q_website: 'Current website',
+      q_about: 'About the business / customers',
+      q_goals: 'Primary goals',
+      q_features: 'Pages / features needed',
+      q_examples: 'Sites they like',
+      q_branding: 'Existing logo / brand assets',
+      q_budget: 'Budget range',
+      q_timeline: 'Desired timeline',
+      q_notes: 'Anything else',
+    };
+    const lines = [];
+    for (const [key, label] of Object.entries(detailLabels)) {
+      const values = fd.getAll(key).filter((v) => String(v).trim() !== '');
+      if (values.length) lines.push(`${label}: ${values.join(', ')}`);
+    }
+
+    const params = new URLSearchParams();
+    params.append('name', fd.get('name') || '');
+    params.append('email', fd.get('email') || '');
+    params.append('business_name', fd.get('business_name') || '');
+    params.append('business_type', fd.get('business_type') || '');
+    params.append('description', lines.join('\n'));
+    params.append('source', 'Client Questionnaire');
+
+    try {
+      await fetch(SCRIPT_URL, { method: 'POST', body: params, mode: 'no-cors' });
+
+      questionnaireForm.innerHTML = `
+        <div class="sm:col-span-2 flex flex-col items-center gap-3 py-8 text-center">
+          <svg class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-lg font-semibold text-heading">Thank you — we've got it!</p>
+          <p class="text-sm text-muted max-w-md">Your questionnaire is in. We'll review your answers and reach out within 24 hours to set up your strategy call.</p>
+        </div>`;
+    } catch {
+      btn.disabled = false;
+      btn.textContent = originalText;
+
+      let errEl = questionnaireForm.querySelector('.form-error');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.className = 'form-error sm:col-span-2 mt-1 text-sm text-red-600 text-center';
+        questionnaireForm.appendChild(errEl);
+      }
+      errEl.textContent = 'Something went wrong — please email us directly at groundwirewebsolutions@gmail.com.';
+    }
+  });
+}
 
 // Intro overlay — 24-hour gate checked in <head> via skip-intro class;
 // this block plays the animation and writes the timestamp on first visit.
