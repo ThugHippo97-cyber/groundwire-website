@@ -306,7 +306,7 @@ document.querySelectorAll('form[action="#"]').forEach((form) => {
         errEl.className = 'form-error sm:col-span-2 mt-1 text-sm text-red-600 text-center';
         form.appendChild(errEl);
       }
-      errEl.textContent = 'Something went wrong — please email us directly at groundwirewebsolutions@gmail.com.';
+      errEl.textContent = 'Something went wrong — please email us directly at groundwireweb@gmail.com.';
     }
   });
 });
@@ -380,7 +380,7 @@ if (questionnaireForm) {
         errEl.className = 'form-error sm:col-span-2 mt-1 text-sm text-red-600 text-center';
         questionnaireForm.appendChild(errEl);
       }
-      errEl.textContent = 'Something went wrong — please email us directly at groundwirewebsolutions@gmail.com.';
+      errEl.textContent = 'Something went wrong — please email us directly at groundwireweb@gmail.com.';
     }
   });
 }
