@@ -427,3 +427,12 @@ if (questionnaireForm) {
     }, { once: true });
   }, EXIT_DELAY);
 })();
+
+// Work page — reveal the demos held past the default 4-card grid.
+const workShowMore = document.getElementById('work-show-more');
+if (workShowMore) {
+  workShowMore.addEventListener('click', () => {
+    document.querySelectorAll('.work-extra').forEach((el) => el.classList.remove('hidden'));
+    document.getElementById('work-show-more-wrap')?.remove();
+  });
+}
